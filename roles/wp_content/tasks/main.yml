@@ -1,0 +1,8 @@
+---
+# Simplest role possible for extracting previously backed up wp-content
+#folder to our Wordpress server
+- name: Extract wp-content.tar.gz into /srv/www/server-01/wp-content
+  become: yes
+  unarchive:
+    src: /vagrant/wp-content.tar.gz
+    dest: /srv/www/{{ server_hostname }}/wp-content

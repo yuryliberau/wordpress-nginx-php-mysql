@@ -1,0 +1,34 @@
+---
+# tasks file for nginx
+
+- name: Update apt cache
+  apt: update_cache=yes cache_valid_time=3600
+  become: yes
+
+- name: Install nginx
+  apt: name={{ item }} state=present
+  become: yes
+  with_items:
+    - nginx
+    - git
+
+- name: Start nginx
+  become: yes
+  service:
+    name: nginx
+    state: started
+
+- name: Create self-signed SSL certificate
+  become: yes
+  command: >
+    openssl req -x509 -subj "/C=BY/ST=Gomelskaya/L=Gomel/O=Piggybank/CN={{server_hostname}}" -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/nginx-selfsigned.key -out /etc/ssl/certs/nginx-selfsigned.crt
+
+- name: Update nginx confs for WordPress + PHP + SSL
+  template: "src=../templates/default-site.conf dest=/etc/nginx/sites-available/{{server_hostname}} owner=www-data group=www-data mode=0644"
+  become: yes
+
+- name: Enable site
+  file: src=/etc/nginx/sites-available/{{server_hostname}} dest=/etc/nginx/sites-enabled/{{server_hostname}} owner=www-data group=www-data state=link
+  notify:
+    - restart nginx
+  become: yes

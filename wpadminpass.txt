@@ -1,0 +1,4 @@
+username and password for Wordpress and Jenkins:
+
+admin
+admin

@@ -1,0 +1,5 @@
+- hosts: server-02
+
+  roles:
+    - mysql
+    - db_import

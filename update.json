@@ -1,0 +1,96 @@
+{
+  "create": [
+    {
+      "name": "adidas YEEZY BOOST 350 V2 Semi Frozen Yellow",
+      "type": "simple",
+      "regular_price": "899",
+      "description": "The adidas Yeezy Boost 350 v2 is one of the most popular Yeezy shoes ever made. It features an elastic Primeknit upper and a BOOST midsole, while the most recognizable detail is the ribbed midsole. First releasing in September of 2016, the Yeezy Boost 350 v2 has gone on to be the best-selling adidas Yeezy shoe so far, with several colorways having released and restocked to date.",
+      "short_description": "The color is Semi Frozen Yellow. The size is 9 UK - 43 1/3 EU.",
+      "categories": [
+        {
+          "id": 26
+        },
+        {
+          "id": 14
+        }
+      ],
+      "images": [
+        {
+          "src": "https://i.imgur.com/eC8H1w8.jpg"
+        },
+        {
+          "src": "https://i.imgur.com/72sr3tF.jpg"
+        }
+      ]
+    },
+    {
+      "name": "adidas YEEZY BOOST 350 V2 White Reflective",
+      "type": "simple",
+      "regular_price": "699",
+      "description": "The adidas Yeezy Boost 350 v2 is one of the most popular Yeezy shoes ever made. It features an elastic Primeknit upper and a BOOST midsole, while the most recognizable detail is the ribbed midsole. First releasing in September of 2016, the Yeezy Boost 350 v2 has gone on to be the best-selling adidas Yeezy shoe so far, with several colorways having released and restocked to date.",
+      "short_description": "The color is White Reflective. The size is 9 UK - 43 1/3 EU.",
+      "categories": [
+        {
+          "id": 26
+        },
+        {
+          "id": 14
+        }
+      ],
+      "images": [
+        {
+          "src": "https://i.imgur.com/S6a63pq.jpg"
+        },
+        {
+          "src": "https://i.imgur.com/bvpznWb.jpg"
+        }
+      ]
+    },
+    {
+      "name": "adidas YEEZY BOOST 350 V2 Black (Non-Reflective)",
+      "type": "simple",
+      "regular_price": "1099",
+      "description": "The adidas Yeezy Boost 350 v2 is one of the most popular Yeezy shoes ever made. It features an elastic Primeknit upper and a BOOST midsole, while the most recognizable detail is the ribbed midsole. First releasing in September of 2016, the Yeezy Boost 350 v2 has gone on to be the best-selling adidas Yeezy shoe so far, with several colorways having released and restocked to date.",
+      "short_description": "The color is Black. The size is 9 UK - 43 1/3 EU.",
+      "categories": [
+        {
+          "id": 26
+        },
+        {
+          "id": 14
+        }
+      ],
+      "images": [
+        {
+          "src": "https://i.imgur.com/Z75TEAi.jpg"
+        },
+        {
+          "src": "https://i.imgur.com/hHP71Ju.jpg"
+        }
+      ]
+    },
+    {
+      "name": "adidas YEEZY BOOST 350 V2 Triple White",
+      "type": "simple",
+      "regular_price": "949",
+      "description": "The adidas Yeezy Boost 350 v2 is one of the most popular Yeezy shoes ever made. It features an elastic Primeknit upper and a BOOST midsole, while the most recognizable detail is the ribbed midsole. First releasing in September of 2016, the Yeezy Boost 350 v2 has gone on to be the best-selling adidas Yeezy shoe so far, with several colorways having released and restocked to date.",
+      "short_description": "The color is Triple White. The size is 9 UK - 43 1/3 EU.",
+      "categories": [
+        {
+          "id": 26
+        },
+        {
+          "id": 14
+        }
+      ],
+      "images": [
+        {
+          "src": "https://i.imgur.com/QleCQfB.jpg"
+        },
+        {
+          "src": "https://i.imgur.com/j6toXTE.jpg"
+        }
+      ]
+    }
+  ]
+}

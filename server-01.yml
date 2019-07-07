@@ -1,0 +1,7 @@
+- hosts: server-01
+
+  roles:
+    - nginx
+    - wordpress
+    - php
+    - wp_content

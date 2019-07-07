@@ -1,0 +1,44 @@
+- name: Update repositories cache and install Java package
+  apt:
+    name: openjdk-8-jre
+    update_cache: yes
+  become: yes
+
+- name: Add Jenkins apt repository signing key
+  apt_key:
+    url: https://pkg.jenkins.io/debian-stable/jenkins.io.key
+    state: present
+  become: yes
+
+- name: Add Jenkins apt repository
+  apt_repository:
+    repo: deb https://pkg.jenkins.io/debian-stable binary/
+    state: present
+  become: yes
+
+- name: Install Jenkins
+  apt:
+    name: jenkins
+    update_cache: yes
+  become: yes
+
+- name: Start service Jenkins, if not started
+  service:
+    name: jenkins
+    state: started
+  become: yes
+
+- name: This enables port forwarding of traffic between ports 80 and 8080
+  become: yes
+  blockinfile:
+    path: /etc/rc.local
+    insertbefore: "exit 0"
+    block: |
+      #Requests from outside
+      iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-ports 8080
+      #Requests from localhost
+      iptables -t nat -I OUTPUT -p tcp -d 127.0.0.1 --dport 80 -j REDIRECT --to-ports 8080
+
+- name: To enable port forwarding
+  command: /etc/rc.local
+  become: yes
