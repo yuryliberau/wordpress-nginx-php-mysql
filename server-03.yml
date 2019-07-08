@@ -3,3 +3,4 @@
   roles:
     - jenkins
     - jenkins_content
+    - jenkins_job
