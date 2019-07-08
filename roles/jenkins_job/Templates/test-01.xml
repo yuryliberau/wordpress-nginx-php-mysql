@@ -1,0 +1,25 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <description>Our test eShop (server-01) uses WooCommerce plugin (WC), which is fully integrated with the WordPress REST API. This allows WC data to be created, read, updated, and deleted using requests in JSON format and using WordPress REST API Authentication methods and standard HTTP verbs which are understood by most HTTP clients.
+To add new products to our eShop we are using a command-line tool cURL and an update.json file where the products we want to add are described.&#xd;
+</description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>curl -k -X POST https://server-01/wp-json/wc/v3/products/batch \
+    -u ck_74b2e8cf4d2e1ac8d9d884864489445570d6094e:cs_881d44c66c4ed04e0b39c6ae5e7f184a25d23df6 \
+    -H "Content-Type: application/json" \
+    -d @/vagrant/update.json</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers/>
+  <buildWrappers/>
+</project>
