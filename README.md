@@ -1,21 +1,18 @@
 # wordpress-nginx-php-mysql
-
 Roles "nginx", "php", "wordpress" and "mysql" were created for the initial website
 setup and can be used futher for the experiments with Wordpress.
 
-
 # wp_content-db_import
-
-
 Roles "wp_content" and "db_import" were created to restore our site from the
 existing backup (wp-content.tar.gz and wordpress.sql).
 
-# jenkins-jenkins-content 
+# jenkins-jenkins-content
+Role "jenkins" was created for Jenkins installation. Role "jenkins_content" restores Jenkins initial configuration without plugins.
 
+# jenkins_job
+Role "jenkins_job" creates necessary job in Jenkins. .xml template is used.
 
-Role "jenkins" was created for Jenkins installation. Role "jenkins_content" configures Jenkins.
-
-Just run:
+Run:
 # vagrant up
 to check the results:
 # https://server-01    (eShop)
