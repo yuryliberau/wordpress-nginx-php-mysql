@@ -4,5 +4,5 @@
 - name: Extract wp-content.tar.gz into /srv/www/server-01/wp-content
   become: yes
   unarchive:
-    src: /vagrant/wp-content.tar.gz
+    src: "../files//wp-content.tar.gz"
     dest: /srv/www/{{ server_hostname }}/wp-content
