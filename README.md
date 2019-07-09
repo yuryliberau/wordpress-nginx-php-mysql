@@ -1,23 +1,23 @@
-# wordpress-nginx-php-mysql
+# Ansible roles description:
 
+# wordpress - nginx - php - mysql
 Roles "nginx", "php", "wordpress" and "mysql" were created for the initial website
-setup and can be used futher for the experiments with Wordpress.
+setup and may be used further for the experiments with Wordpress.
 
-
-# wp_content-db_import
-
-
+# wp_content - db_import
 Roles "wp_content" and "db_import" were created to restore our site from the
 existing backup (wp-content.tar.gz and wordpress.sql).
 
-# jenkins-jenkins-content 
+# jenkins - jenkins-content
+Role "jenkins" was created for Jenkins installation. Role "jenkins_content" restores Jenkins initial configuration without plugins.
 
+# jenkins_job
+Role "jenkins_job" creates necessary job in Jenkins. .xml template is used.
 
-Role "jenkins" was created for Jenkins installation. Role "jenkins_content" configures Jenkins.
-
-Just run:
+Run:
 # vagrant up
-to check the results:
+
+To check the results:
 # https://server-01    (eShop)
 # https://server-01/admin
 # http://server-03     (Jenkins)
@@ -27,6 +27,7 @@ admin
 admin
 
 # Jenkins job description:
-
 Our test eShop (server-01) uses WooCommerce plugin (WC), which is fully integrated with the WordPress REST API. This allows WC data to be created, read, updated, and deleted using requests in JSON format and using WordPress REST API Authentication methods and standard HTTP verbs which are understood by most HTTP clients. 
 To add new products to our eShop we are using a command-line tool cURL and the content of the file update.json where the products we want to add are described.
+
+# Thank you for the courses, Viktor.
