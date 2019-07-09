@@ -1,5 +1,5 @@
 # Simplest role possible for extracting previously backed up JENKINS_HOME
-#folder to our Jenkins server
+#folder to our Jenkins server.
 - name: Stop service Jenkins, if started
   service:
     name: jenkins
@@ -9,7 +9,7 @@
 - name: Restore Jenkins initial configuration
   become: yes
   unarchive:
-    src: /vagrant/jenkins.tar.gz
+    src: "../files/jenkins.tar.gz"
     dest: /var/lib/jenkins/
 
 - name: Start Jenkins service
