@@ -34,7 +34,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     vmconfig.vm.network "forwarded_port", guest: 80, host: 8000
 #     Run Ansible from the Vagrant Host
     config.vm.provision "ansible_local" do |ansible|
-      ansible.verbose = "v"
+      ansible.verbose = "vvv"
       ansible.playbook = "server-01.yml"
       ansible.raw_arguments = ["--connection=paramiko"]
     end
@@ -65,7 +65,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     vmconfig.vm.network "forwarded_port", guest: 80, host: 8001
 #     Run Ansible from the Vagrant Host
     config.vm.provision "ansible_local" do |ansible|
-      ansible.verbose = "v"
+      ansible.verbose = "vvv"
       ansible.playbook = "server-02.yml"
       ansible.raw_arguments = ["--connection=paramiko"]
     end
@@ -96,7 +96,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     vmconfig.vm.network "forwarded_port", guest: 80, host: 8002
 #     Run Ansible from the Vagrant Host
     config.vm.provision "ansible_local" do |ansible|
-      ansible.verbose = "v"
+      ansible.verbose = "vvv"
       ansible.playbook = "server-03.yml"
       ansible.raw_arguments = ["--connection=paramiko"]
     end
