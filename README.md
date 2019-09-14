@@ -30,4 +30,4 @@ admin
 Our test eShop (server-01) uses WooCommerce plugin (WC), which is fully integrated with the WordPress REST API. This allows WC data to be created, read, updated, and deleted using requests in JSON format and using WordPress REST API Authentication methods and standard HTTP verbs which are understood by most HTTP clients. 
 To add new products to our eShop we are using a command-line tool cURL and the content of the file update.json where the products we want to add are described.
 
-# Thank you for the courses, Viktor.
+
